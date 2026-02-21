@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=https://franekk3.github.io/Fisq/">
-    <title> </title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="Threadlyx">
+	<link rel="apple-touch-icon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://franekk3.github.io/m3-web/styles/m3-style.css">
+	<link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Franekk3.github.io </title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            align-items: center;
+            justify-content: center;
+        }
+        .m3-content-with-button {
+            text-align: center;
+    background-color: #1d1b20;
+    color: #cac4d0;
+    font-family: 'Google Sans', sans-serif;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    max-width: 600px;
+    width: 90%;
+}
+.m3-content-with-button p {
+    margin: 7px;
+}
+.horizontal-arangment {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.m3-ButtonWithAnimatedShapeSample {
+    width: 90%;
+    max-width: 300px;
+}
+    </style>
 </head>
 <body>
-    <p><a href="https://franekk3.github.io/Fisq/"> Click here !</a>.</p>
+    <div class="m3-content-with-button">
+        <p style="font-size: 26px;"> Franekk3.github.io </p>   
+        <p style="font-size: 16px; margin-bottom: 25px;"> Curent projects: </p>   
+        <div class="horizontal-arangment">
+            <button onclick="window.location.href='https://franekk3.github.io/Fisq/'" class="m3-ButtonWithAnimatedShapeSample"> Fisq! - FlashCards </button>
+            <button onclick="window.location.href='https://franekk3.github.io/m3-web/'" class="m3-ButtonWithAnimatedShapeSample"> M3-Web - Material 3 in CSS</button>
+        </div> 
+
+    </div>
 </body>
 </html>
