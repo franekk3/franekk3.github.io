@@ -12,6 +12,7 @@
         <div id="container" class="container-main">
             <img style="height: 200px; width: 200px;" src="./icons/icon.png" alt="Logo">
             <p>Franekk3</p>
+            <p id="label" style="font-size: 17px; font-weight: normal; color:rgb(134, 74, 0); font-style: italic;"></p>
         </div>
     </div>
     <div class="container-secondary" id="content-box">
@@ -46,20 +47,33 @@
     <div style="opacity: 0; height: 400px;" ><p> . </p>
     </div>
     <script>
+        const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+        .test(navigator.userAgent);
+        const label = document.getElementById('label');
+        function setLabel() {
+            if (isMobile) {
+                label.textContent = "swipe up to enter";
+            } else {
+                label.textContent = "scroll down to enter";
+            }
+        }
             window.onscroll = function() {
                 const kontener = document.getElementById('container');
                 const content = document.getElementById('content-box');
                 
                 if (window.scrollY > 100) {
+                    label.style.display = 'none'
                     kontener.classList.add('sticky');
                     content.classList.add('animation-flyIn')
                     content.classList.remove('animation-flyOut')
                 } else {
+                    label.style.display = 'block'
                     kontener.classList.remove('sticky');
                     content.classList.remove('animation-flyIn')
                     content.classList.add('animation-flyOut')
                 }
             };
+        setLabel()
     </script>
     </body>
 </html>

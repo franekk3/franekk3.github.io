@@ -101,5 +101,5 @@ body {
 }
 .container-main img { height: 200px; width: 200px; border-radius: 50%; transition: 0.5s; }
 .container-main.sticky img { height: 50px !important; width: 50px !important; margin-left: 20px;}
-.container-main p { font-family: sans-serif; font-weight: bold; font-size: 22px; color: rgb(183, 100, 0); transition: 0.5s; }
+.container-main p { font-family: sans-serif; font-weight: bold; font-size: 22px; color: rgb(121, 67, 0); transition: 0.5s; }
 .container-main.sticky p { font-size: 18px; margin-right: 20px;}
