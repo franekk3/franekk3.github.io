@@ -3,77 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./icons/icon.png">
+    <title>Franekk3</title>
     <link rel="stylesheet" href="./style.css">
-    <title> franekk3 </title>
 </head>
 <body>
-    <div class="header-wrapper">
-        <div id="container" class="container-main">
-            <img style="height: 200px; width: 200px;" src="./icons/icon.png" alt="Logo">
-            <p>Franekk3</p>
-            <p id="label" style="font-size: 17px; font-weight: normal; color:rgb(134, 74, 0); font-style: italic;"></p>
+    <main>
+            <div class="project" id="header">
+                <div onclick="window.location.href = '#home'" style=" display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px; margin-left: 10px;  align-items: center; user-select: none;">
+                <img style="height: 30px; width: 30px; border: solid 1px #d6e3ff; box-shadow: 3px 3px #d6e3ff; border-radius: 3px; padding: 2px; margin-bottom: 3px;" src="./icons/person_fill.svg">
+                    <p style="font-weight: 1000; font-size: 20px;"> Franekk3's site </p>
+                </div>
+                <hr id="navigation-hr">
+                <div class="navigation-buttons">
+                    <img onclick="window.location.href = '#home'" id="home" src="./icons/home.svg">
+                    <img onclick="window.location.href = '#about-me'" style="display: none" id="person" src="./icons/person.svg">
+                    <img onclick="window.location.href = '#projects'" id="folder-code" src="./icons/folder_code.svg">
+                    <img onclick="window.location.href = 'https://github.com/franekk3'" src="./icons/github_lblue.png" style="height: 26px; width:26px; padding: 4px;">
+                </div>
+            </div>
+        <div id="projects" class="page">
+            <div class="project">
+                <div class="project-title">
+                    <img src="https://github.com/franekk3/Cubyy/blob/main/media/icons/icon.png?raw=true">
+                    <p> Cubyy </p>
+                </div>
+                <div class="badge" style="background-color: rgb(0, 205, 10); min-width: 200px;">
+                    <p style="color: rgb(0, 71, 4)"> Active Development </p>
+                </div>
+
+                <p><i><b>Description:</b></i> <b>Cubyy</b> is web based Rubik's Cube timer. It stores all your data <b>locally</b> in your browser, with <b>PWA</b> <i>(Progresive Web App)</i> support, futures <b>Material 3 like UI</b>, <b>GAN Timer support</b> and it's compleatly <b>open source & free.</b></p>
+            <div class="buttons">
+                <button onclick="window.location.href = 'https://github.com/franekk3/Cubyy'">
+                    <img src="./icons/github.png">
+                    Github
+                </button>
+                <button onclick="window.location.href = 'https://franekk3.github.io/Cubyy'">
+                    Website
+                </button>
+
+            </div>
+            <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Last update: Jul 28, 2026 </p>
+            </div>
+            <div class="project">
+                <div class="project-title">
+                    <img style="height: 40px; width: 40px;" src="https://camo.githubusercontent.com/0156f61c4181bdb495eed40b2f65b82f12084e72d58e0832b1b551f0fec4808c/68747470733a2f2f6672616e656b6b332e6769746875622e696f2f466973712f69636f6e732f69636f6e2e706e67">
+                    <p> Fisq! Web </p>
+                </div>
+                <div class="badge" style="background-color: rgb(205, 205, 0); min-width: 200px;">
+                    <p style="color: rgb(77, 77, 1)"> Temporarily Abandoned </p>
+                </div>
+
+                <p><i><b>Description:</b></i> <b>Fisq!</b> is Web based flashcard app, that helps you with learning. It futures own UI style, it works only in your browser (no external servers). <b>Open source</b> & <b>free</b></p>
+            <div class="buttons">
+                <button onclick="window.location.href = 'https://github.com/franekk3/Fisq'">
+                    <img src="./icons/github.png">
+                    Github
+                </button>
+                <button onclick="window.location.href = 'https://franekk3.github.io/Fisq'">
+                    Website
+                </button>
+
+            </div>
+            <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Last update: May 9, 2026 </p>
+            </div>
+        
         </div>
-    </div>
-    <div class="container-secondary" id="content-box">
-        <div class="section-box">
-            <p style="font-size: 22px; font-weight: bold; font-family: sans-serif; color: rgb(91, 50, 0);"> Current projects: </p>
-            <div class="content-container">
-                <p class="content-container-label" onclick="window.location.href = 'https://franekk3.github.io/Fisq';"> Fisq! </p>
-            </div>
-            <div class="content-container">
-                <p class="content-container-label" onclick="window.location.href = 'https://franekk3.github.io/Cubyy';"> Cubyy </p>
+        <div id="about-me" class="page">
+            <div class="project">
+                <p style="font-size: 22px; font-weight: bolder;"> About Me </p>
+                <p> . </p>
             </div>
         </div>
-        <div class="section-box">
-            <p style="font-size: 22px; font-weight: bold; font-family: sans-serif; color: rgb(91, 50, 0);"> My domains: </p>
-            <div class="content-container" onclick="window.location.href = 'https://franekk3.github.io';">
-                <p class="content-container-label" > franekk3.github.io </p>
-            </div>
-            <div class="content-container" onclick="window.location.href = 'https://franekk3.vercel.app/';">
-                <p class="content-container-label" > franekk3.vercel.app </p>
+        <div id="home" class="page">
+                <p style="font-size: 22px; font-weight: bolder; font-family: 'Courier New', Courier, monospace; margin: 5px;"> Updates </p>
+            <div class="project">
+                <div class="update">
+                    <img id="cubyy-1.0.2" src="./media/screenshots/cubyy-1.0.2-desktop.png">
+                    <div>
+                        <p style="font-size: 22px; font-weight: bolder; margin: 2px;"> Cubyy [1.0.2]</p>
+                        <p> Cubyy got updated to 1.0.2, this is first update since 4 months! It fixed some issues with user interface and bringed better scramble generators. </p>
+                    </div>
+                </div>
+                <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Jul 28, 2026 </p>
+                <div class="buttons" style="margin-top: 0px;">
+                    <button onclick="window.location.href = 'https://github.com/franekk3/Cubyy'">
+                        <img src="./icons/github.png">
+                        Github
+                    </button>
+                    <button onclick="window.location.href = 'https://franekk3.github.io/Cubyy'">
+                        Website
+                    </button>
+
+                </div>
             </div>
         </div>
-        <div class="section-box" style="margin-bottom: 135px;">
-            <p style="font-size: 22px; font-weight: bold; font-family: sans-serif; color: rgb(91, 50, 0);"> Info: </p>
-            <div class="content-container">
-                <p class="content-container-label"> About </p>
-            </div>
-            <div class="content-container">
-                <p class="content-container-label"> GitHub </p>
-            </div>
-        </div>
-    </div>
-    <div style="opacity: 0; height: 400px;" ><p> . </p>
-    </div>
+    </main>
+
     <script>
-        const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
-        .test(navigator.userAgent);
-        const label = document.getElementById('label');
-        function setLabel() {
-            if (isMobile) {
-                label.textContent = "swipe up to enter";
+        const isMobile = window.matchMedia("(max-width: 768px)").matches;
+        if (isMobile) [
+            document.getElementById('cubyy-1.0.2').src = './media/screenshots/cubyy-1.0.2-phone.png'
+        ]
+        function router() {
+            // Get the current hash from the URL (default to '#home' if none exists)
+            let hash = window.location.hash || '#home';
+            if (hash == '#projects') {
+                document.getElementById('folder-code').src = './icons/folder_code_fill.svg';
+                document.getElementById('person').src = './icons/person.svg';
+                document.getElementById('home').src = './icons/home.svg';
+            } else if(hash == '#about-me') {
+                document.getElementById('folder-code').src = './icons/folder_code.svg';
+                document.getElementById('person').src = './icons/person_fill.svg';
+                document.getElementById('home').src = './icons/home.svg';
+
+            } else if (hash == '#home'){
+                document.getElementById('home').src = './icons/home_fill.svg';
+                document.getElementById('person').src = './icons/person.svg';
+                document.getElementById('folder-code').src = './icons/folder_code.svg';
             } else {
-                label.textContent = "scroll down to enter";
+                document.getElementById('home').src = './icons/home.svg';
+                document.getElementById('person').src = './icons/person.svg';
+                document.getElementById('folder-code').src = './icons/folder_code.svg';
             }
-        }
-            window.onscroll = function() {
-                const kontener = document.getElementById('container');
-                const content = document.getElementById('content-box');
-                
-                if (window.scrollY > 100) {
-                    label.style.display = 'none'
-                    kontener.classList.add('sticky');
-                    content.classList.add('animation-flyIn')
-                    content.classList.remove('animation-flyOut')
+
+
+            // Select all page sections and nav links
+            const pages = document.querySelectorAll('.page');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Loop through all pages to show/hide them
+            pages.forEach(page => {
+                if ('#' + page.id === hash) {
+                    page.classList.add('active'); // Show matching page
                 } else {
-                    label.style.display = 'block'
-                    kontener.classList.remove('sticky');
-                    content.classList.remove('animation-flyIn')
-                    content.classList.add('animation-flyOut')
+                    page.classList.remove('active'); // Hide other pages
                 }
-            };
-        setLabel()
+            });
+
+            // Optional: Highlight active nav link
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === hash) {
+                    link.style.color = '#0056b3';
+                } else {
+                    link.style.color = '#007BFF';
+                }
+            });
+        }
+
+        // Run router when the page first loads
+        window.addEventListener('DOMContentLoaded', router);
+
+        // Run router whenever the URL hash changes (user clicks a link)
+        window.addEventListener('hashchange', router);
     </script>
-    </body>
+</body>
 </html>

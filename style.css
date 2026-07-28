@@ -1,105 +1,172 @@
-@keyframes flyIn {
-    0% { transform: translateY(+50%) translateX(-50%); }
-    100% {transform: translateY(0) translateX(-50%);}
-}
-@keyframes flyOut {
-    0% { transform: translateY(0) translateX(-50%); }
-    100% {transform: translateY(+50%) translateX(-50%);}
-}
-
 body {
-    background-color: antiquewhite;
-    margin: 0;
-    padding: 0;
-    /* Usuwamy flexa i height z body, żeby scroll działał naturalnie */
+    background-color: #111318;
+    color: #e2e2e9;
 }
-
-.header-wrapper {
-    height: 80vh; /* 100vh ekranu + 20vh "zapasu" na animację */
-    width: 100%;
+.project {
+    border-top: solid 1px #d6e3ff;
+    border-left: solid 1px #d6e3ff;
+    border-radius: 5px;
+    max-width: 800px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px #d6e3ff;
+    transition: all 0.1s ease;
+    p {
+        max-width: 90%;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
     position: relative;
+    .badge {
+        position: absolute; top: 10px; right: 10px;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        border-radius: 16px;
+
+        p {
+            text-align: center;
+            font-size: 14px;
+            margin: 2px !important;
+            font-weight: bold;
+        }
+    }
+
+}
+.project:hover {
+    transform: translateY(5px);
+    box-shadow: 8px 8px #d6e3ff;
 }
 
-.container-main {
-    background-color: rgb(254, 218, 176);
+main {
+    max-width: 1000px;
+    width: 98%;
     display: flex;
     flex-direction: column;
-    align-items: center;    
-    justify-content: center; 
-    width: 100%;
-    height: 100vh; /* Początkowo cały ekran */
-    position: sticky; 
-    top: 0;
-    z-index: 100;
-    transition: height 0.5s ease, border-radius 0.5s ease, background-color 0.5s ease;
-    box-sizing: border-box;
-    overflow: hidden;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20px;
 }
-
-/* Klasa aktywowana po scrollu */
-.container-main.sticky {
-    height: 80px; /* Docelowa wysokość paska */
+.project-title {
+    display: flex;
     flex-direction: row;
-    top: 0px;
-    justify-content: space-between;
-    position: fixed;
-
-    border-radius: 0 0 22px 22px;
+    align-items: center;
+    gap: 20px;
+    img {
+        height: 30px;
+        width: 30px;
+    }
+    p {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 1000;
+        font-size: 22px;
+        
+    }
 }
-
-.container-secondary {
-    background-color: rgb(255, 238, 218);
-    border: 2px solid rgb(243, 164, 68);     
-    border-radius: 22px;
-    width: 95%;
-    max-width: 600px;
+.buttons {
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    button {
+        border-radius: 10px;
+        border: none;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 5px 24px;
+        background-color: #aac7ff;
+        color: #0a305f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 3px 3px #0a305f;
+        transition: all 0.2s ease;
+        img {
+            height: 20px;
+            width: 20px;
+        }
+    }
+    button:hover {
+        border-radius: 8px;
+        background-color: #b8d0fd;
+        box-shadow: 5px 5px;
+        }
+    button:active {
+        border-radius: 4px;
+        background-color: #ccdeff;
+    }
+}
+.navigation-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 10px;
+    gap: 10px;
+    img {
+        height: 30px;
+        width: 30px;
+        border: solid 1px #d6e3ff;
+        border-radius: 3px;
+        box-shadow: 3px 3px #d6e3ff;
+        padding: 2px;
+    }
+}
+.page {
     height: 100%;
-    margin-top: 25px;
-    text-align: center;
-    position: fixed;
-    z-index: 99;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    top: 90px;
-    bottom: 10px;
-    overflow: auto;
-    justify-self: center;
-    display: flex;
+    width: 100%;
     flex-direction: column;
-    left: 50%;
-    transform: translateX(-50%);
+    gap: 20px;
     align-items: center;
+    display: none;
+}
+.page.active {
+    display: flex !important;
+}
+#header {
+    flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center;
+}
+#navigation-hr {
+    display: none;
+}
+.update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    img {
+        width: 400px;
+        max-width: 50%;
+        scale: 1.1;
+    }
+    p {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .project-title {
+        margin-top: 25px;
+    }
+    #header {
+        flex-direction: column;
+        gap: 0px;
+        padding-bottom: 10px;
+    }
 
+    #navigation-hr {
+        display: block;
+        width: 80%;
+        border: solid 1px #d6e3ff;
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+    .update {
+        p {
+            font-size: 14px;
+        }
+
+    }
 }
-.section-box {
-    background-color: rgb(255, 219, 176);
-    width: 95%;
-    margin-top: 10px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 10px;
-}
-.content-container {
-    background-color: rgb(251, 207, 153);
-    width: 95%;
-    margin-top: 10px;
-    border-radius: 16px;   
-}
-.content-container-label {
-    color: rgb(106, 58, 0);
-    font-weight: bold;
-    font-size: 18px;
-    font-family: sans-serif;
-    cursor: pointer;
-}
-.animation-flyIn {
-    animation: flyIn 1s ease;
-}
-.animation-flyOut {
-    animation: flyOut 0.5s ease;
-}
-.container-main img { height: 200px; width: 200px; border-radius: 50%; transition: 0.5s; }
-.container-main.sticky img { height: 50px !important; width: 50px !important; margin-left: 20px;}
-.container-main p { font-family: sans-serif; font-weight: bold; font-size: 22px; color: rgb(121, 67, 0); transition: 0.5s; }
-.container-main.sticky p { font-size: 18px; margin-right: 20px;}
