@@ -15,13 +15,35 @@
                 </div>
                 <hr id="navigation-hr">
                 <div class="navigation-buttons">
-                    <img onclick="window.location.href = '#home'" id="home" src="./icons/home.svg">
+                    <img onclick="window.location.href = '#home'" id="home"  style="display: none" src="./icons/home.svg">
                     <img onclick="window.location.href = '#about-me'" style="display: none" id="person" src="./icons/person.svg">
                     <img onclick="window.location.href = '#projects'" id="folder-code" src="./icons/folder_code.svg">
                     <img onclick="window.location.href = 'https://github.com/franekk3'" src="./icons/github_lblue.png" style="height: 26px; width:26px; padding: 4px;">
                 </div>
             </div>
         <div id="projects" class="page">
+            <div class="project">
+                <div class="project-title">
+                    <img src="https://github.com/franekk3/Cubyy/blob/main/media/icons/icon.png?raw=true">
+                    <p> Cubyy for esp32cyd </p>
+                </div>
+                <div class="badge" style="background-color: rgb(0, 205, 10); min-width: 200px;">
+                    <p style="color: rgb(0, 71, 4)"> Active Development </p>
+                </div>
+
+                <p><i><b>Description:</b></i> <b>Cubyy for esp32cyd </b> (cheap yellow display) is Cubyy implementation for the <b>esp32cyd board</b>. It's less advanced than the main Cubyy project. Still futures <b>GAN smart timer</b> support.</p>
+            <div class="buttons">
+                <button onclick="window.location.href = 'https://github.com/franekk3/Cubyy'">
+                    <img src="./icons/github.png">
+                    Github
+                </button>
+                <button onclick="window.location.href = 'https://franekk3.github.io/Cubyy'">
+                    Website
+                </button>
+
+            </div>
+            <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Last update: Aug 15, 2026 </p>
+            </div>
             <div class="project">
                 <div class="project-title">
                     <img src="https://github.com/franekk3/Cubyy/blob/main/media/icons/icon.png?raw=true">
@@ -42,7 +64,7 @@
                 </button>
 
             </div>
-            <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Last update: Jul 28, 2026 </p>
+            <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Last update: Aug 15, 2026 </p>
             </div>
             <div class="project">
                 <div class="project-title">
@@ -74,7 +96,8 @@
                 <p> . </p>
             </div>
         </div>
-        <div id="home" class="page">
+
+        <div id="home" style="display: none !important;" class="page">
                 <p style="font-size: 22px; font-weight: bolder; font-family: 'Courier New', Courier, monospace; margin: 5px;"> Updates </p>
             <div class="project">
                 <div class="update">
@@ -84,7 +107,26 @@
                         <p> Cubyy got updated to 1.0.2, this is first update since 4 months! It fixed some issues with user interface and bringed better scramble generators. </p>
                     </div>
                 </div>
-                <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Jul 28, 2026 </p>
+                <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Aug 15, 2026 </p>
+                <div class="buttons" style="margin-top: 0px;">
+                    <button onclick="window.location.href = 'https://github.com/franekk3/Cubyy'">
+                        <img src="./icons/github.png">
+                        Github
+                    </button>
+                    <button onclick="window.location.href = 'https://franekk3.github.io/Cubyy'">
+                        Website
+                    </button>
+
+                </div>
+            <div class="project">
+                <div class="update">
+                    <img id="cubyy-1.0.3" src="./media/screenshots/cubyy-1.0.3-desktop.png">
+                    <div>
+                        <p style="font-size: 22px; font-weight: bolder; margin: 2px;"> Cubyy [1.0.3]</p>
+                        <p style="text-align: left;">→ UI fixes and improvements, <br>→ Better window resizing, <br>→ Solves now save date and time stamp data  </p>
+                    </div>
+                </div>
+                <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Aug 15, 2026 </p>
                 <div class="buttons" style="margin-top: 0px;">
                     <button onclick="window.location.href = 'https://github.com/franekk3/Cubyy'">
                         <img src="./icons/github.png">
@@ -96,17 +138,20 @@
 
                 </div>
             </div>
+
+            </div>
         </div>
     </main>
 
     <script>
         const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        if (isMobile) [
+        if (isMobile) {
             document.getElementById('cubyy-1.0.2').src = './media/screenshots/cubyy-1.0.2-phone.png'
-        ]
+            document.getElementById('cubyy-1.0.3').src = './media/screenshots/cubyy-1.0.3-phone.png'
+        }
         function router() {
             // Get the current hash from the URL (default to '#home' if none exists)
-            let hash = window.location.hash || '#home';
+            let hash = window.location.hash || '#projects';
             if (hash == '#projects') {
                 document.getElementById('folder-code').src = './icons/folder_code_fill.svg';
                 document.getElementById('person').src = './icons/person.svg';
