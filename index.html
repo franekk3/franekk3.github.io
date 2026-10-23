@@ -8,86 +8,26 @@
 </head>
 <body>
     <main>
-            <div class="project" id="header">
-                <div onclick="window.location.href = '#home'" style=" display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px; margin-left: 10px;  align-items: center; user-select: none;">
-                <img style="height: 30px; width: 30px; border: solid 1px #d6e3ff; box-shadow: 3px 3px #d6e3ff; border-radius: 3px; padding: 2px; margin-bottom: 3px;" src="./icons/person_fill.svg">
-                    <p style="font-weight: 1000; font-size: 20px;"> Franekk3's site </p>
-                </div>
-                <hr id="navigation-hr">
-                <div class="navigation-buttons">
-                    <img onclick="window.location.href = '#home'" id="home"  style="display: none" src="./icons/home.svg">
-                    <img onclick="window.location.href = '#about-me'" style="display: none" id="person" src="./icons/person.svg">
-                    <img onclick="window.location.href = '#projects'" id="folder-code" src="./icons/folder_code.svg">
-                    <img onclick="window.location.href = 'https://github.com/franekk3'" src="./icons/github_lblue.png" style="height: 26px; width:26px; padding: 4px;">
-                </div>
+        <div class="project" id="header">
+            <div onclick="window.location.href = '#home'" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px; margin-left: 10px; user-select: none;">
+                <img style="height: 30px; width: 30px; border: solid 1px #d6e3ff; box-shadow: 3px 3px #d6e3ff; border-radius: 3px; padding: 2px; margin-bottom: 3px;" src="https://avatars.githubusercontent.com/u/203024650?v=4&size=128">
+                <p style="font-weight: 1000; font-size: 20px;"> Franekk3's site </p>
             </div>
-        <div id="projects" class="page">
-            <div class="project">
-                <div class="project-title">
-                    <img src="https://github.com/franekk3/Cubyy/blob/main/media/icons/icon.png?raw=true">
-                    <p> Cubyy for esp32cyd </p>
-                </div>
-                <div class="badge" style="background-color: rgb(0, 205, 10); min-width: 200px;">
-                    <p style="color: rgb(0, 71, 4)"> Active Development </p>
-                </div>
-
-                <p><i><b>Description:</b></i> <b>Cubyy for esp32cyd </b> (cheap yellow display) is Cubyy implementation for the <b>esp32cyd board</b>. It's less advanced than the main Cubyy project. Still futures <b>GAN smart timer</b> support.</p>
-            <div class="buttons">
-                <button onclick="window.location.href = 'https://github.com/franekk3/Cubyy-for-esp32cyd'">
-                    <img src="./icons/github.png">
-                    Github
-                </button>
-
-
+            <hr id="navigation-hr">
+            <div class="navigation-buttons">
+                <img onclick="window.location.href = '#home'" id="home-icon" style="display: none" src="./icons/home.svg">
+                <img onclick="window.location.href = '#about-me'" style="display: none" id="person-icon" src="./icons/person.svg">
+                <img onclick="window.location.href = '#projects'" id="folder-code-icon" src="./icons/folder_code.svg">
+                <img onclick="window.location.href = 'https://github.com/franekk3'" src="./icons/github_lblue.png" style="height: 26px; width:26px; padding: 4px;">
             </div>
-            <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Last update: Aug 19, 2026 </p>
-            </div>
-            <div class="project">
-                <div class="project-title">
-                    <img src="https://github.com/franekk3/Cubyy/blob/main/media/icons/icon.png?raw=true">
-                    <p> Cubyy </p>
-                </div>
-                <div class="badge" style="background-color: rgb(0, 205, 10); min-width: 200px;">
-                    <p style="color: rgb(0, 71, 4)"> Active Development </p>
-                </div>
-
-                <p><i><b>Description:</b></i> <b>Cubyy</b> is web based Rubik's Cube timer. It stores all your data <b>locally</b> in your browser, with <b>PWA</b> <i>(Progresive Web App)</i> support, futures <b>Material 3 like UI</b>, <b>GAN Timer support</b> and it's compleatly <b>open source & free.</b></p>
-            <div class="buttons">
-                <button onclick="window.location.href = 'https://github.com/franekk3/Cubyy'">
-                    <img src="./icons/github.png">
-                    Github
-                </button>
-                <button onclick="window.location.href = 'https://franekk3.github.io/Cubyy'">
-                    Website
-                </button>
-
-            </div>
-            <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Last update: Aug 15, 2026 </p>
-            </div>
-            <div class="project">
-                <div class="project-title">
-                    <img style="height: 40px; width: 40px;" src="https://camo.githubusercontent.com/0156f61c4181bdb495eed40b2f65b82f12084e72d58e0832b1b551f0fec4808c/68747470733a2f2f6672616e656b6b332e6769746875622e696f2f466973712f69636f6e732f69636f6e2e706e67">
-                    <p> Fisq! Web </p>
-                </div>
-                <div class="badge" style="background-color: rgb(205, 205, 0); min-width: 200px;">
-                    <p style="color: rgb(77, 77, 1)"> Temporarily Abandoned </p>
-                </div>
-
-                <p><i><b>Description:</b></i> <b>Fisq!</b> is Web based flashcard app, that helps you with learning. It futures own UI style, it works only in your browser (no external servers). <b>Open source</b> & <b>free</b></p>
-            <div class="buttons">
-                <button onclick="window.location.href = 'https://github.com/franekk3/Fisq'">
-                    <img src="./icons/github.png">
-                    Github
-                </button>
-                <button onclick="window.location.href = 'https://franekk3.github.io/Fisq'">
-                    Website
-                </button>
-
-            </div>
-            <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Last update: May 9, 2026 </p>
-            </div>
-        
         </div>
+
+        <div id="projects" class="page">
+            <div id="projects-container">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+
         <div id="about-me" class="page">
             <div class="project">
                 <p style="font-size: 22px; font-weight: bolder;"> About Me </p>
@@ -95,8 +35,8 @@
             </div>
         </div>
 
-        <div id="home" style="display: none !important;" class="page">
-                <p style="font-size: 22px; font-weight: bolder; font-family: 'Courier New', Courier, monospace; margin: 5px;"> Updates </p>
+        <div id="home" class="page">
+            <p style="font-size: 22px; font-weight: bolder; font-family: 'Courier New', Courier, monospace; margin: 5px;"> Updates </p>
             <div class="project">
                 <div class="update">
                     <img id="cubyy-1.0.2" src="./media/screenshots/cubyy-1.0.2-desktop.png">
@@ -114,14 +54,12 @@
                     <button onclick="window.location.href = 'https://franekk3.github.io/Cubyy'">
                         Website
                     </button>
-
                 </div>
-            <div class="project">
                 <div class="update">
                     <img id="cubyy-1.0.3" src="./media/screenshots/cubyy-1.0.3-desktop.png">
                     <div>
                         <p style="font-size: 22px; font-weight: bolder; margin: 2px;"> Cubyy [1.0.3]</p>
-                        <p style="text-align: left;">→ UI fixes and improvements, <br>→ Better window resizing, <br>→ Solves now save date and time stamp data  </p>
+                        <p style="text-align: left;">→ UI fixes and improvements, <br>→ Better window resizing, <br>→ Solves now save date and time stamp data </p>
                     </div>
                 </div>
                 <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Aug 15, 2026 </p>
@@ -133,70 +71,205 @@
                     <button onclick="window.location.href = 'https://franekk3.github.io/Cubyy'">
                         Website
                     </button>
-
                 </div>
-            </div>
-
             </div>
         </div>
     </main>
 
     <script>
-        const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        if (isMobile) {
-            document.getElementById('cubyy-1.0.2').src = './media/screenshots/cubyy-1.0.2-phone.png'
-            document.getElementById('cubyy-1.0.3').src = './media/screenshots/cubyy-1.0.3-phone.png'
-        }
-        function router() {
-            // Get the current hash from the URL (default to '#home' if none exists)
-            let hash = window.location.hash || '#projects';
-            if (hash == '#projects') {
-                document.getElementById('folder-code').src = './icons/folder_code_fill.svg';
-                document.getElementById('person').src = './icons/person.svg';
-                document.getElementById('home').src = './icons/home.svg';
-            } else if(hash == '#about-me') {
-                document.getElementById('folder-code').src = './icons/folder_code.svg';
-                document.getElementById('person').src = './icons/person_fill.svg';
-                document.getElementById('home').src = './icons/home.svg';
+        // ----- 1. Definicje projektów (bez Fisq!) -----
+        const PROJECTS = [
+            {
+                name: 'Fisky',
+                repo: 'franekk3/Fisky',
+                icon: 'https://raw.githubusercontent.com/franekk3/Fisky/be669fa316bd59369e62c3d2fc0d69ac06f31b24/icons/icon.svg',
+                description: '<i><b>Description:</b></i> <b>Fisky</b> Minimalist flashcards right in your browser - your sets, your learning. Built in the spirit of Material 3, fully offline, as a PWA.',
+                buttons: [
+                    { label: 'Github', url: 'https://github.com/franekk3/Fisky', icon: './icons/github.png' },
+                    { label: 'Website', url: 'https://franekk3.github.io/Fisky' }
+                ]
+            },
+            {
+                name: 'Cubyy for esp32cyd',
+                repo: 'franekk3/Cubyy-for-esp32cyd',
+                icon: 'https://github.com/franekk3/Cubyy/blob/main/media/icons/icon.png?raw=true',
+                description: '<i><b>Description:</b></i> <b>Cubyy for esp32cyd </b> (cheap yellow display) is Cubyy implementation for the <b>esp32cyd board</b>. It\'s less advanced than the main Cubyy project. Still futures <b>GAN smart timer</b> support.',
+                buttons: [
+                    { label: 'Github', url: 'https://github.com/franekk3/Cubyy-for-esp32cyd', icon: './icons/github.png' }
+                ]
+            },
+            {
+                name: 'Cubyy',
+                repo: 'franekk3/Cubyy',
+                icon: 'https://github.com/franekk3/Cubyy/blob/main/media/icons/icon.png?raw=true',
+                description: '<i><b>Description:</b></i> <b>Cubyy</b> is web based Rubik\'s Cube timer. It stores all your data <b>locally</b> in your browser, with <b>PWA</b> <i>(Progresive Web App)</i> support, futures <b>Material 3 like UI</b>, <b>GAN Timer support</b> and it\'s compleatly <b>open source & free.</b>',
+                buttons: [
+                    { label: 'Github', url: 'https://github.com/franekk3/Cubyy', icon: './icons/github.png' },
+                    { label: 'Website', url: 'https://franekk3.github.io/Cubyy' }
+                ]
+            }
+        ];
 
-            } else if (hash == '#home'){
-                document.getElementById('home').src = './icons/home_fill.svg';
-                document.getElementById('person').src = './icons/person.svg';
-                document.getElementById('folder-code').src = './icons/folder_code.svg';
+        // ----- 2. Pobieranie daty ostatniego commita -----
+        async function fetchLatestCommitDate(repo) {
+            try {
+                const res = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=1`, {
+                    headers: { 'Accept': 'application/vnd.github.v3+json' }
+                });
+                if (!res.ok) throw new Error(`GitHub API error: ${res.status}`);
+                const data = await res.json();
+                if (!data || data.length === 0) return null;
+                return new Date(data[0].commit.committer.date);
+            } catch (err) {
+                console.warn(`Nie udało się pobrać daty dla ${repo}:`, err);
+                return null;
+            }
+        }
+
+        // ----- 3. Formatowanie daty -----
+        function formatDate(date) {
+            if (!date) return 'Unknown';
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        // ----- 4. Generowanie HTML dla pojedynczego projektu -----
+        function renderProject(project, lastCommitDate) {
+            const now = new Date();
+            const daysSince = lastCommitDate ? (now - lastCommitDate) / (1000 * 60 * 60 * 24) : Infinity;
+            const isAbandoned = daysSince > 90;
+
+            const badgeBg = isAbandoned ? 'rgb(205, 205, 0)' : 'rgb(0, 205, 10)';
+            const badgeTextColor = isAbandoned ? 'rgb(77, 77, 1)' : 'rgb(0, 71, 4)';
+            const badgeLabel = isAbandoned ? 'Temporarily Abandoned' : 'Active Development';
+
+            const buttonsHtml = project.buttons.map(btn => `
+                <button onclick="window.location.href = '${btn.url}'">
+                    ${btn.icon ? `<img src="${btn.icon}">` : ''}
+                    ${btn.label}
+                </button>
+            `).join('');
+
+            return `
+                <div class="project animatable">
+                    <div class="project-title">
+                        <img src="${project.icon}">
+                        <p> ${project.name} </p>
+                    </div>
+                    <div class="badge" style="background-color: ${badgeBg}; min-width: 200px;">
+                        <p style="color: ${badgeTextColor}"> ${badgeLabel} </p>
+                    </div>
+                    <p>${project.description}</p>
+                    <div class="buttons">
+                        ${buttonsHtml}
+                    </div>
+                    <p style="font-size: 14px; margin-bottom: 10px; margin-top: 5px;"> Last update: ${formatDate(lastCommitDate)} </p>
+                </div>
+            `;
+        }
+
+        // ----- 5. Animacja wejścia kart (stagger + scroll reveal) -----
+        function revealCards(container) {
+            const cards = container.querySelectorAll('.project.animatable');
+            if (!cards.length) return;
+
+            // Karty widoczne od razu – animuj je po kolei
+            let visibleIndex = 0;
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const inView = rect.top < window.innerHeight && rect.bottom > 0;
+                if (inView) {
+                    card.style.setProperty('--reveal-delay', `${visibleIndex * 120}ms`);
+                    visibleIndex++;
+                }
+            });
+
+            // Reszta – animacja przy wejściu w viewport (scroll / mobile)
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+            cards.forEach(card => observer.observe(card));
+        }
+
+        // ----- 6. Główne ładowanie i sortowanie -----
+        async function loadProjects() {
+            const container = document.getElementById('projects-container');
+
+            // Loader na czas pobierania dat z API
+            container.innerHTML = '<div class="loading-spinner"></div>';
+
+            const dates = await Promise.all(
+                PROJECTS.map(p => fetchLatestCommitDate(p.repo))
+            );
+
+            const projectsWithDates = PROJECTS.map((p, i) => ({
+                ...p,
+                lastCommitDate: dates[i]
+            }));
+
+            projectsWithDates.sort((a, b) => {
+                if (!a.lastCommitDate) return 1;
+                if (!b.lastCommitDate) return -1;
+                return b.lastCommitDate - a.lastCommitDate;
+            });
+
+            container.innerHTML = projectsWithDates
+                .map(p => renderProject(p, p.lastCommitDate))
+                .join('');
+
+            requestAnimationFrame(() => revealCards(container));
+        }
+
+        // ----- 7. Router -----
+        function router() {
+            let hash = window.location.hash || '#projects';
+
+            if (hash === '#projects') {
+                document.getElementById('folder-code-icon').src = './icons/folder_code_fill.svg';
+                document.getElementById('person-icon').src = './icons/person.svg';
+                document.getElementById('home-icon').src = './icons/home.svg';
+            } else if (hash === '#about-me') {
+                document.getElementById('folder-code-icon').src = './icons/folder_code.svg';
+                document.getElementById('person-icon').src = './icons/person_fill.svg';
+                document.getElementById('home-icon').src = './icons/home.svg';
+            } else if (hash === '#home') {
+                document.getElementById('home-icon').src = './icons/home_fill.svg';
+                document.getElementById('person-icon').src = './icons/person.svg';
+                document.getElementById('folder-code-icon').src = './icons/folder_code.svg';
+                window.location.hash = '#projects';
             } else {
-                document.getElementById('home').src = './icons/home.svg';
-                document.getElementById('person').src = './icons/person.svg';
-                document.getElementById('folder-code').src = './icons/folder_code.svg';
+                document.getElementById('home-icon').src = './icons/home.svg';
+                document.getElementById('person-icon').src = './icons/person.svg';
+                document.getElementById('folder-code-icon').src = './icons/folder_code.svg';
             }
 
-
-            // Select all page sections and nav links
-            const pages = document.querySelectorAll('.page');
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            // Loop through all pages to show/hide them
-            pages.forEach(page => {
+            document.querySelectorAll('.page').forEach(page => {
                 if ('#' + page.id === hash) {
-                    page.classList.add('active'); // Show matching page
+                    page.classList.add('active');
                 } else {
-                    page.classList.remove('active'); // Hide other pages
-                }
-            });
-
-            // Optional: Highlight active nav link
-            navLinks.forEach(link => {
-                if (link.getAttribute('href') === hash) {
-                    link.style.color = '#0056b3';
-                } else {
-                    link.style.color = '#007BFF';
+                    page.classList.remove('active');
                 }
             });
         }
 
-        // Run router when the page first loads
-        window.addEventListener('DOMContentLoaded', router);
+        // ----- 8. Inicjalizacja -----
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                const img102 = document.getElementById('cubyy-1.0.2');
+                const img103 = document.getElementById('cubyy-1.0.3');
+                if (img102) img102.src = './media/screenshots/cubyy-1.0.2-phone.png';
+                if (img103) img103.src = './media/screenshots/cubyy-1.0.3-phone.png';
+            }
 
-        // Run router whenever the URL hash changes (user clicks a link)
+            router();
+            loadProjects();
+        });
+
         window.addEventListener('hashchange', router);
     </script>
 </body>
