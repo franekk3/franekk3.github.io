@@ -3,7 +3,6 @@ body {
     color: #e2e2e9;
 }
 
-/* ---------- Kontener projektów (renderowany dynamicznie) ---------- */
 #projects-container {
     display: flex;
     flex-direction: column;
@@ -12,7 +11,6 @@ body {
     width: 100%;
 }
 
-/* ---------- Loader (widoczny podczas pobierania dat z API) ---------- */
 .loading-spinner {
     width: 44px;
     height: 44px;
@@ -26,19 +24,17 @@ body {
     to { transform: rotate(360deg); }
 }
 
-/* ---------- Karta projektu ---------- */
 .project {
     border-top: solid 1px #d6e3ff;
     border-left: solid 1px #d6e3ff;
     border-radius: 5px;
-    max-width: 800px;
-    width: 95%;
+    max-width: 800px;box-shadow: 5px 5px #d6e3ff;
+    width: 98%;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 5px 5px #d6e3ff;
-    /* zamiast "all" – konkretne properties, żeby nie kolidowały z animacją wejścia */
+    
     transition: transform 0.15s ease, box-shadow 0.15s ease, border-radius 0.15s ease;
     position: relative;
 
@@ -72,11 +68,8 @@ body {
     box-shadow: 8px 8px #d6e3ff;
 }
 
-/* ---------- Animacja wejścia kart ---------- */
-/* .animatable ustawiamy w JS tylko na kartach (nie na headerze) */
 .project.animatable {
     opacity: 0;
-    /* Osobny property "translate" – nie gryzie się z hoverem, który używa "transform" */
     translate: 0 32px;
 }
 
@@ -96,7 +89,6 @@ body {
     }
 }
 
-/* Szacunek dla prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
     .project.animatable {
         opacity: 1;
@@ -107,7 +99,6 @@ body {
     }
 }
 
-/* ---------- Layout ---------- */
 main {
     max-width: 1000px;
     width: 98%;
@@ -244,4 +235,159 @@ main {
             font-size: 14px;
         }
     }
+    .horizontal-content-wrap {
+        flex-wrap: wrap !important;
+    }
+}
+.select-one {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5px;
+    svg {
+        margin-top: 6px; 
+    }
+    div {
+        background-color: #282a2f;
+        padding: 5px 10px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    div.selected {
+        background-color: #aac7ff;
+        color: #0a305f;
+    }
+}
+.section {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.video-player-android {
+    position: relative;
+    border: solid #37393e 3px;
+    border-radius: 25px;
+    max-height: 453px;
+
+    hr {
+        width: 7px;
+        color: black;
+        background-color: #111318;
+        border: solid #37393e 1px;
+        position: absolute;
+        top: 2.5px;
+        border-radius: 100%;;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        height: 7px;
+    }
+    video {
+        border-radius: 25px;
+        border: solid black 2px;
+        max-height: 450px;
+
+    }
+}
+.video-player-ios {
+    background-color: black;
+    border: solid #e2e2e9 1px;
+    padding: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 32px;
+    position: relative;
+    video {
+        border-radius: 2.5px;
+        max-height: 340px;
+    }
+    hr.home-button {
+        position: absolute;
+        bottom: 3px;
+        height: 32px;
+        width: 32px;
+        border-radius: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #0c0e13;
+    }
+    hr.call-speaker {
+        position: absolute;
+        top: 15px;
+        height: 5px;
+        width: 45px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #0c0e13;
+        border: 1px solid #1d2024;
+    }
+    hr.front-facing-camera {
+        left: calc(50% - 40px);
+        transform: translateX(-50%);
+        height: 6px;
+        width: 6px;
+        position: absolute;
+        top: 14.5px;
+        border-radius: 100%;
+        background-color: #1d2024;
+        border: solid 1px #1d2024;
+    }
+}
+.horizontal-content-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-top: solid white 0.5px;
+}
+.video-player-desktop {
+    position: relative;
+    border: solid #37393e 3px;
+    border-radius: 15px;
+    width: 90%;
+    video {
+        border-radius: 15px;
+        border: solid black 2px;
+        width: calc(100% - 3px) !important;
+        height: 100%;
+    }
+}
+#fullscreenBtn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.1s ease;
+    z-index: 10;
+}
+
+#fullscreenBtn:hover {
+    background: rgba(0, 0, 0, 0.85);
+    transform: scale(1.08);
+}
+
+#fullscreenBtn:active {
+    transform: scale(0.95);
 }
