@@ -115,8 +115,8 @@ main {
     align-items: center;
     gap: 20px;
     img {
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
     }
     p {
         font-family: 'Courier New', Courier, monospace;
